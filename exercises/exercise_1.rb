@@ -23,3 +23,6 @@ store_gastown = Store.create(
   mens_apparel: true,
   womens_apparel: false
   )
+
+  # returns tot count of all rows
+  puts Store.count 
