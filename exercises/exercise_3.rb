@@ -8,6 +8,6 @@ puts "----------"
 # Your code goes here ...
 
 @store3 = Store.find_by(id: 3)
-@store3.destroy 
+@store3.destroy # deletes gastown store id: 3
 
 puts Store.count 
