@@ -9,7 +9,7 @@ class Store < ActiveRecord::Base
       if  mens_apparel.present? || womens_apparel.present?
         return true
       else
-        errors.add :mens_apparel, :womens_apparel, message: "at_least_mens_or_womens: must contain at least men's or women's"
+        errors.add :mens_apparel, :womens_apparel, message: "must contain at least men's or women's apparel"
       end
     end
 end

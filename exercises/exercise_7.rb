@@ -12,11 +12,12 @@ puts "----------"
 # Your code goes here ...
 
 puts "Which store location would you like to create?.."
-user_input_location = gets.chomp
+user_store = gets.chomp
 
 
-store_from_user = Store.create(
-  name: user_input_location
+store = Store.create(
+  name: user_store
   )
-
-puts store_from_user.errors.full_messages
+unless store.valid?
+  store.errors.full_messages.each {|err| pp "Error: " + err}
+end
