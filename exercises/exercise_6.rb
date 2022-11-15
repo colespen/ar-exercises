@@ -18,10 +18,12 @@ puts "----------"
 
 @store1.employees.create(first_name: "Wendel", last_name: "Lint", hourly_rate: 60)
 
-@store2.employees.create(first_name: "Zimshey", last_name: "Bell", hourly_rate: 290)
+employee_five = @store2.employees.create(first_name: "", last_name: "", hourly_rate: 290)
 
 @store2.employees.create(first_name: "Hillary", last_name: "Shale", hourly_rate: 20)
 
 @store2.employees.create(first_name: "Temple", last_name: "Whale", hourly_rate: 34)
 
 @store2.employees.create(first_name: "Lohgan", last_name: "Meldo", hourly_rate: 55)
+
+puts employee_five.errors.full_messages
